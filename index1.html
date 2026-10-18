@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <style>
+        /* ================= 1. 全局背景与美化 ================= */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            /* 背景图：这里用了一张高质量风景图，并加了一层暗色半透明滤镜让背景不刺眼。
+               如果你想换成自己的图，可以把网址改成你的图片路径，例如: url('images/bg.jpg') */
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('images/bg.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #5b5b5b;
+        }
+
+        /* ================= 2. 居中包裹容器 ================= */
+        .blog-container {
+            max-width: 750px;       /* 限制最大宽度，防止被屏幕拉得太宽 */
+            margin: 40px auto;      /* 上下留白 40px，左右 auto 实现绝对居中！ */
+            padding: 0 20px;        /* 手机端左右安全边距 */
+        }
+
+        /* ================= 3. 顶部导航与标题（居中） ================= */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.88); /* 半透明背景 */
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0 0 12px 0;
+            color: #0066cc;
+            font-size: 26px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center; /* 导航链接横向居中 */
+            gap: 25px;               /* 链接间距 */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        /* ================= 4. 文章卡片（居中、半透明、带阴影） ================= */
+        .post {
+            background: rgba(255, 255, 255, 0.6); /* 卡片半透明白，透出背景图 */
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;                   /* 卡片间距 */
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* 立体阴影 */
+            text-align: left;                       /* 卡片内的文字保持左对齐 */
+    background: rgba(255, 255, 255, 0.75); /* 你刚才设置的半透明 */
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    /* === 在这里添加以下关于字体的属性 === */
+    font-size: 16px;       /* 调整字号（默认一般是 16px，可以改成 15px 或 18px） */
+    font-weight: bold;   /* 字体粗细：normal(正常), bold(加粗) */
+    color: #575555;        /* 调整正文文字的颜色（深灰色比纯黑色看着更柔和） */
+    line-height: 1.8;      /* 行高（加大行高可以让文字排版更舒展、不拥挤） */
+}
+
+        .post h2 a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .post h2 a:hover {
+            color: #0066cc;
+        }
+
+        .post-date {
+            font-size: 13px;
+            color: #888;
+            margin: 6px 0 15px 0;
+        }
+
+        /* ================= 5. 分类与标签样式 ================= */
+        .meta-tags {
+            margin-top: 15px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* 分类徽章 */
+        .category-badge {
+            background-color: #0066cc;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .category-badge:hover {
+            background-color: #004d99;
+        }
+
+        /* 标签小徽章 */
+        .tag-badge {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        /* ================= 6. 页脚 ================= */
+        footer {
+            text-align: center;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 14px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* 加阴影让白色文字在背景上更清晰 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 整个博客的外层包裹容器（实现完美居中的核心） -->
+    <div class="blog-container">
+
+        <!-- 顶部导航栏 -->
+        <header>
+            <h1>朝日的个人博客</h1>
+            <nav>
+                <a href="#">首页</a>
+                <a href="#">Galgame专栏</a>
+                <a href="#">小石川朝日KOISHI ASAHI</a>
+                <a href="#">读书笔记</a>
+            </nav>
+        </header>
+
+        <!-- 主要文章列表区 -->
+        <main>
+            <!-- 文章卡片 1 -->
+            <article class="post">
+                <h2><a href="Galgame/向日葵教会与漫长暑假：胧白圣歌.html">向日葵教会与漫长暑假：胧白圣歌</a></h2>
+                <p class="post-date">发布于 2026年10月18日</p>
+                <p>击败我的不是天真，是无邪</p>
+                
+                <!-- 分类与标签区域 -->
+                <div class="meta-tags">
+                    <a href="#" class="category-badge">📁 Galgame</a>
+                    <span class="tag-badge">#我永远喜欢美少女</span>
+                    <span class="tag-badge">#推后感</span>
+                </div>
+            </article>
+
+            <!-- 文章卡片 2 -->
+            <article class="post">
+                <h2><a href="Reading/读书笔记/与日本文豪喝咖啡.html">读了《和日本文豪一起喝咖啡》——咖啡馆随笔相关</a></h2>
+                <p class="post-date">发布于 2026年10月19日</p>
+                <p>然而，我总觉得自己似乎不是为了喝咖啡而喝咖啡。</p>
+                
+                <!-- 分类与标签区域 -->
+                <div class="meta-tags">
+                    <a href="#" class="category-badge">📁 读书笔记</a>
+                    <span class="tag-badge">#日本文学</span>
+                    <span class="tag-badge">#文章合集</span>
+                </div>
+            </article>
+        </main>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>&copy; 2026 小石川朝日KOISHI ASAHI. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

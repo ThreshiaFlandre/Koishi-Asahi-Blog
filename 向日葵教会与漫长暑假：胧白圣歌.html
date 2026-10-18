@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>向日葵教会与漫长暑假：胧白圣歌 - 朝日的个人博客</title>
+    <style>
+        /* ================= 1. 复用全局背景与美化 ================= */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            /* 注意：因为这个文件在 Galgame 子文件夹里，如果引用根目录的图片，路径前面要加 ../
+               或者直接用你喜欢的一张背景图/网络图 */
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1600');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* ================= 2. 居中包裹容器 ================= */
+        .blog-container {
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* ================= 3. 顶部导航与标题 ================= */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.88);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        /* ================= 4. 文章详情正文容器 ================= */
+        .post-detail {
+            background: rgba(255, 255, 255, 0.92); /* 半透明背景 */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            line-height: 1.8; /* 舒适的行高，适合阅读长文 */
+        }
+
+        .post-detail h1 {
+            font-size: 26px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .post-meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .post-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        /* 正文插图样式 */
+        .post-content img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        /* 返回按钮样式 */
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: 600;
+        }
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= 5. 页脚 ================= */
+        footer {
+            text-align: center;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 14px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blog-container">
+
+        <!-- 顶部导航 -->
+        <header>
+            <nav>
+                <a href="../index.html">首页</a>
+                <a href="index.html">Galgame专栏</a>
+                <a href="../about.html">关于我</a>
+            </nav>
+        </header>
+
+        <!-- 文章详情主体 -->
+        <main>
+            <article class="post-detail">
+                <h1>向日葵教会与漫长暑假：胧白圣歌</h1>
+                <div class="post-meta">
+                    发布于 2026年10月18日 &bull; 分类：Galgame
+                </div>
+
+                <!-- 核心正文内容区（你可以随心所欲在这里加段落、图片、甚至音乐） -->
+                <div class="post-content">
+                    <p>击败我的不是天真，是无邪。</p>
+                    <p>枕社NB</p>
+                    
+                    <h3>游戏体验与感悟</h3>
+                    <p>（这里可以写你对剧情、角色、音乐的详细评价。比如角色的塑造非常立体，音乐一响直接泪目等等……）</p>
+                    
+                    <!-- 如果想在文章里加图片，可以这样插： -->
+                    <!-- <img src="../images/sunflower-screenshot.jpg" alt="游戏截图"> -->
+
+                    <p>非常好画风</p>
+                </div>
+
+                <!-- 返回主页或列表的链接 -->
+                <a href="../index.html" class="back-btn">&larr; 返回博客首页</a>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 朝日的个人博客. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

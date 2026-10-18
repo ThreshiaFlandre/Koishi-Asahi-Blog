@@ -36,3 +36,37 @@ footer {
     color: #aaa;
     font-size: 14px;
 }
+.container {
+    display: flex; /* 让里面的元素变成横向排列 */
+}
+.tag {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+header, main, footer, .post {
+    max-width: 700px;  /* 限制内容的最大宽度，防止被屏幕拉得太宽 */
+    margin-left: auto;   /* 关键：左边自动留白 */
+    margin-right:  auto;  /* 关键：右边自动留白 */
+}
+.post {
+    background: rgba(255, 255, 255, 0.9); /* 半透明白色背景，能透出背景图 */
+    padding: 30px;
+    border-radius: 12px;
+    margin: 20px auto; /* 上下留出距离，左右 auto 实现绝对居中 */
+    text-align: left;  /* 如果卡片里的文字想保持左对齐就留着，想整体居中改成 center */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* 加一点阴影让卡片更有立体感 */
+}
+header {
+    text-align: center; /* 让标题和导航文字居中 */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* 让导航链接在中间横向排列 */
+    gap: 20px;               /* 链接之间的间距 */
+    margin-top: 10px;
+}
