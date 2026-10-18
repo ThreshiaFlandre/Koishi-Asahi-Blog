@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #0066cc;
+}
+
+.post {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.date {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #aaa;
+    font-size: 14px;
+}
